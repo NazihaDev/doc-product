@@ -1,0 +1,50 @@
+Algorithme Dot product
+Var
+    vector = Array[1..100] of FLOAT;
+begin
+     n1 := read_size();
+    read_array(n1,v1);
+    n2 := read_size();
+    read_array(n2,v2);
+    dot_product(v1,v2,dot);
+    IF (ps = 0) THEN
+        Write("V1 and V2 are orthogonal");
+    ELSE
+        Write("V1 and V2 are not orthogonal");
+    END_IF
+END
+Procedure Dot product(v1:vector,v2:vector,n:Integer var ps:float)
+var
+     
+    ps:float;
+    i:integer;
+begin
+    ps <-- 0;
+    i:=0;
+      IF (v1.length <> v2.length) THEN
+        Write("vectors with different sizes we cannot calculat dot product");
+        dot := NaN; // NaN : not definte number
+    END_IF
+    
+for i from 1 to n do            
+    ps <-- ps+v1[i]*v2[i];
+
+ End_For
+ END
+ FUNCTION Dot product(v1,v2,n) : FLOAT
+ VAR
+   ps:float;
+   i:integer;
+ BEGIN
+    ps <-- 0;
+IF (v1.length <> v2.length)
+IF (v1.length <> v2.length) THEN
+        Write("vectors with different sizes we cannot calculat dot product");
+        dot := NaN;
+    END_IF
+    for i from 1 to n do 
+    ps <-- ps+v1[i]*v2[i];
+
+ End_For
+    RETURN Dot product <--ps ;
+ END
